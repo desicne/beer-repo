@@ -10,3 +10,24 @@ describe('HelloWorld.vue', () => {
     expect(wrapper.text()).toMatch(msg)
   })
 })
+
+/**
+ * import { actions } from './../../src/store/actions'
+ * 
+  jest.mock('axios', () => {
+    return {
+      get: () => ({ data: { id: 73 }})
+    }
+  })
+
+
+  describe('fetchBeer', () => {
+    it('makes a request and commits the response', async () => {
+      const store = { commit: jest.fn() }
+
+      await actions.fetchBeer(store)
+
+      expect(store.commit).toHaveBeenCalledWith('FETCH_BEER', { userId: 73 })
+    }) 
+  })
+*/
